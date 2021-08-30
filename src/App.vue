@@ -12,6 +12,14 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted () {
+    this.mTest()
+  },
+  methods: {
+    async mTest () {
+      await this.$store.dispatch('signIn')
+    }
   }
 }
 </script>
