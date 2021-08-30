@@ -5,9 +5,6 @@ class AuthRepository {
   async signIn () {
     const targetPath = resource + '/guest/sign_in?guest_user_id=72'
     let response = await ApiService.post(targetPath)
-    if (response.data.data) {
-      response.data = response.data.data
-    }
     if (response.status === 201) {
       return {
         accessToken: response.data['confirm_infomation']['access-token'],
