@@ -1,4 +1,5 @@
 import {AuthRepository} from '@/Api/Repository/AuthRepository'
+import { setHeader } from '@/utils/auth'
 
 const auth = {
   state: {
@@ -29,6 +30,7 @@ const auth = {
           uid: auth.uid,
           autoLoginToken: auth.autoLoginToken
         }
+        setHeader(headerParam)
         dispatch('setAuthHeader', headerParam)
         return auth
       } else {
