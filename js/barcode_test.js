@@ -1,8 +1,9 @@
-$(function () {
+
+// $(function () {
 
     startScanner();
 
-});
+// });
 
 //APIリクエストの二重送信を避けるためのフラグ
 var _requestFlg = 0;
