@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <p @click="$router.push('/barcode')">バーコード撮影</p>
-    <p @click="$router.push('/character_recognition')">原材料名撮影</p>
+    <p><router-link to="/barcode">バーコード撮影</router-link></p>
+    <p><router-link to="/character_recognition">原材料名撮影</router-link></p>
     <router-view/>
   </div>
 </template>
@@ -11,6 +11,7 @@ export default {
   name: 'App',
   data () {
     return {
+
     }
   },
   watch: {
