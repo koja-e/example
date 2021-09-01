@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <p @click="$router.push('/barcode')">バーコード</p>
+    <p @click="$router.push('/barcode')">バーコード撮影</p>
+    <p @click="$router.push('/character_recognition')">原材料名撮影</p>
     <router-view/>
   </div>
 </template>
@@ -15,8 +16,12 @@ export default {
   watch: {
   },
   mounted () {
+    this.mTest()
   },
   methods: {
+    async mTest () {
+      await this.$store.dispatch('signIn')
+    }
   }
 }
 </script>

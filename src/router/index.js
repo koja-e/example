@@ -12,6 +12,11 @@ const router = new Router({
       name: 'barcode',
       component: () => import('@/pages/barcode')
     },
+    {
+      path: '/character_recognition',
+      name: 'characterRecognition',
+      component: () => import('@/pages/characterRecognition')
+    }
   ],
   /**
    * ページ遷移時にページの頭に戻る

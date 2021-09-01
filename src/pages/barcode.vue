@@ -31,7 +31,6 @@ export default {
     }
   },
   mounted () {
-    this.mTest()
     /* eslint-disable no-unused-vars */
     /* eslint-disable no-undef */
     $(function () {
@@ -123,9 +122,6 @@ export default {
     /* eslint-disable no-undef */
   },
   methods: {
-    async mTest () {
-      await this.$store.dispatch('signIn')
-    },
     onClick: function() {
       this.raw_matrial = this.raw_matrial + '0';
     }
